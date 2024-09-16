@@ -1,1 +1,59 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iain Lee - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Iain Lee</h1>
+        <p>Professional Contact Information</p>
+    </header>
+    <section id="contact">
+        <h2>Contact Information</h2>
+        <div class="contact-info">
+            <img src="headshot.jpg" alt="iain headshot" class="contact-image">
+            <div class="contact-details">
+                <p>Email: 
+                    <a href="mailto:icleen@gmail.com">icleen@gmail.com</a> 
+                    <a href="mailto:iain.lee@utah.com">iain.lee@utah.com</a>
+                </p>
+                <p>Phone: (530) 867-7768</p>
+                <p>Links: 
+                    <a href="https://robot-learning.cs.utah.edu/ilee" target="_blank">Ll4ma Lab - Univeristy of Utah</a> 
+                    <a href="https://github.com/icleen" target="_blank">Github</a>
+                    <a href="https://www.linkedin.com/in/iclee141" target="_blank">LinkedIn</a> 
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Contextual Residual Reinforcement Learning</h3>
+            <p>Instead of learning a policy from scratch to perform robotics tasks, we propose leveraging known motion planning algorithms in conjunction with reinforcement learning to overcome unpredictable state and action dynamics. Building off of the work of <a href="https://arxiv.org/abs/1812.06298" target="_blank">Residual Policy Learning</a> or <a href="https://arxiv.org/abs/1812.03201" target="_blank">Residual Reinforcement Learning for Robot Control</a> we proposed to have a base policy take actions in the environment with each action modified slightly by a learned residual policy. This would allow the policy to learn the important parts of the state space more efficiently and then learn to modify the base policy so as to improve its efficacy towards the final goal. Our target environment was pick and placement of objects using a 6dof robotic arm. Residual Learning was never proven as a viable method for the task, however. Recent studies such as <a href="https://arxiv.org/html/2309.15293v4" target="_blank">MaxDiffRL</a> propose that learned policies struggle when the action control matrix is modified so that exploring some parts of the state space are more difficult than others. This could explain Residual RL's lack of performance on the pick and place task. Current work is on attempting to verify this hypothesis and using MaxDiffRL to solve the residual learning paradigm.</p>
+            <!-- <img src="path-to-image1.jpg" alt="Project 1 Image">
+            <a href="https://www.example.com" target="_blank">View Project</a> -->
+        </div>
+        <div class="project">
+            <h3>Building a Lincoln Log Cabin</h3>
+            <p>Robots often struggle with precise pick and place tasks. Building a Lincoln Log cabin is a particularly difficult task as it requires precise estimations of log locations on the work surface, as well as precise placement in the target cabin location. This is additionally made difficult when the robot hand adjusts the pose of the log when picking, making the offset between hand and log an unkown variable. This project was to see how far we could get in this task utilizing only off the shelf algorithms. As you can see in the video, we were occasionally able to place logs correctly. Increased success rate would require a better estimation of the log post-grasp and is left as a future project. </p>
+            <!-- <img src="path-to-image2.jpg" alt="Project 2 Image"> -->
+            <!-- <a href="https://www.example.com" target="_blank">View Project</a> -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/OgN786R4JYQ?si=UvkOWdtUFgJxSA8W" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="project">
+            <h3>Trajectory Optimization</h3>
+            <p>I helped develop in-house software to perform trajectory optimization under a variety of optimization algorithms, including gradient descent, gaus-newton's method, and BFGS. We developed these with both the Augmented Lagrangian and Penalty methods for optimizing over constraints, the constraints in our case being object collisions. See <a href="https://bitbucket.org/robot-learning/ll4ma-opt-sandbox/src/main/">ll4ma-opt-sandbox</a> for details. </p>
+            <!-- <img src="path-to-image2.jpg" alt="Project 2 Image"> -->
+            <!-- <a href="https://www.example.com" target="_blank">View Project</a> -->
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
